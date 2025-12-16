@@ -2,16 +2,17 @@ name: Daily Pantun Bot
 
 on:
   schedule:
-    - cron: '0 9 * * *'  # 9AM Malaysia / Aceh
+    - cron: '0 9 * * *'   # 9 AM Malaysia / Aceh
   workflow_dispatch:
 
 jobs:
   tweet:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
